@@ -1,0 +1,67 @@
+@media print {
+	#header p {
+		visibility: visible;
+	}
+	#header {
+		visibility: hidden;
+	}
+	#sidebar, #footer, #dashfooter, #hiw, #menusw, .ui-tabs-nav, #toolbar, #datasrc {
+		display: none !important;
+		visibility: hidden;
+	}
+	#title {
+		text-align: center;
+		left: 0;
+		top: 0;
+		border: 0;
+		padding: 0;
+		background: white;
+		color: black;
+	}
+	#econtent {
+		margin-top: 2em;
+		width: 100%;
+		position: static;
+		left: 0;
+		top: 0;
+		border: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	body {
+		background: white;
+	}
+
+	div.zoom {
+		display: none;
+	}
+	div.legend {
+		margin-top: 0;
+		margin-bottom: 0;
+		position: relative;
+		max-height: initial !important;
+	}
+
+	div.jspContainer {
+		position: static !important;
+		height: auto !important;
+		overflow: visible !important;
+	}
+
+	div.jspContainer > * {
+		display: none !important;
+	}
+
+	div.jspPane {
+		position: static !important;
+		display: block !important;
+		float: none !important;
+	}
+	table.tablesorter thead tr .header {
+		background-image: none;
+	}
+	div.favs, div.refresh, div.popdetail {
+		display: none !important;
+	}
+}

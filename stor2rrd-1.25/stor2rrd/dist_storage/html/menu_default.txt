@@ -1,0 +1,9 @@
+O:1::::::
+T:doc:Documentation:gui-help.html::::
+T:maincfg:Main configuration cfg:/stor2rrd-cgi/log-cgi.sh?name=maincfg&gui=1::::
+T:scfg:Storage configuration:/stor2rrd-cgi/log-cgi.sh?name=stcfg&gui=1::::
+T:acfg:Alias configuration:/stor2rrd-cgi/log-cgi.sh?name=aliascfg&gui=1::::
+T:elog:Error log:/stor2rrd-cgi/log-cgi.sh?name=errlog&gui=1::::
+T:errcgi:Error log cgi-bin:/stor2rrd-cgi/log-cgi.sh?name=errcgi&gui=1::::
+T:upgrade:Product upgrade:/stor2rrd-cgi/upgrade.sh?cmd=form::::
+T:clogs:Collect Logs:/stor2rrd-cgi/collect_logs.sh?cmd=page::::

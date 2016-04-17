@@ -1,0 +1,87 @@
+<div style="text-align: center">
+	<p id="emptydash" style="display:none">Please select some graphs you want to see here! (or <a id="filldashlink" href="#">use predefined set</a>)</br>
+	Use this <img src="css/images/favoff.gif" alt="Add to dashboard icon" style="vertical-align: text-bottom;" /> at top right corner of each graph to place the graph into the dashboard.
+	</p>
+	<p id="nocookies" style="color: red; display: none">Your browser doesn't accept cookies. Cookies are required to use DashBoard. You can either enable cookies or use an <a href="index_old.html" onclick="location.href='index_old.html'">old GUI</a>.</p>
+	<div id="tabs"> 
+		<ul>
+			<li><a href="#tabs-1">Custom Group</a></li>
+			<li><a href="#tabs-2">Pool</a></li>
+			<li><a href="#tabs-3">Raid group</a></li>
+			<li><a href="#tabs-4">Volume</a></li>
+			<li><a href="#tabs-5">Drive</a></li>
+			<li><a href="#tabs-6">Port</a></li>
+			<li><a href="#tabs-7">CPU</a></li>
+			<li><a href="#tabs-8">Host</a></li>
+			<li><a href="#tabs-9">SAN</a></li>
+			<li><a href="#tabs-10">Cache</a></li>
+		</ul>
+		<div id="tabs-1">
+			<ul id="dashboard-cust" class="dashlist">
+			<p>Custom Group</p>
+			</ul>
+			<br style="clear:both">
+		</div>
+		<div id="tabs-2">
+			<ul id="dashboard-pool" class="dashlist">
+			<p>Pool</p>
+			</ul>
+			<br style="clear:both">
+		</div>
+		<div id="tabs-3">
+			<ul id="dashboard-rank" class="dashlist">
+			<p>RAID group</p>
+			</ul>
+			<br style="clear:both">
+		</div>
+		<div id="tabs-4">
+			<ul id="dashboard-volume" class="dashlist">
+			<p>Volume</p>
+			</ul>
+			<br style="clear:both">
+		</div>
+		<div id="tabs-5">
+			<ul id="dashboard-drive" class="dashlist">
+			<p>Drive</p>
+			</ul>
+			<br style="clear:both">
+		</div>
+		<div id="tabs-6">
+			<ul id="dashboard-port" class="dashlist">
+			<p>Port</p>
+			</ul>
+			<br style="clear:both">
+		</div>
+		<div id="tabs-7">
+			<ul id="dashboard-cpu" class="dashlist">
+			<p>CPU</p>
+			</ul>
+			<br style="clear:both">
+		</div>
+		<div id="tabs-8">
+			<ul id="dashboard-host" class="dashlist">
+			<p>Host</p>
+			</ul>
+			<br style="clear:both">
+		</div>
+		<div id="tabs-9">
+			<ul id="dashboard-san" class="dashlist">
+			<p>SAN</p>
+			</ul>
+		</div>
+		<div id="tabs-10">
+			<ul id="dashboard-cache" class="dashlist">
+			<p>Cache</p>
+			</ul>
+		</div>
+	</div>
+	<p><br style="clear:both"></p>
+	<div id="dashfooter" style="padding-top: 1em; border-top: 1px dotted grey; clear: both">
+		<button id="dbstyle" title="Switch Dashboard style">Switch to Flat Style</button>
+		<button id="clrcookies" title="Remove all DashBoard items (destructive!)">Clear DashBoard</button>
+		<button id="filldash" title="Append predefined items: POOL IO R/W summary.">Add predefined</button>
+		<button id="savedash" title="Save DashBoard state for later use on other machine/browser">Save DashBoard</button>
+		<button id="loaddash" title="Restore DashBoard items from previously saved file (current state will be lost!)">Restore DashBoard</button>
+		<input type="image" id="lpar2rrd" style="display: none; width: 140px; float: right" title="Visit LPAR2RRD (IBM Power performance monitoring)" onclick="window.open('http://www.lpar2rrd.com', '_blank')" src="css/images/lpar2rrd-logo-140.png">
+	</div>
+</div>

@@ -1,0 +1,58 @@
+#!/bin/ksh
+#
+# STOR2RRD Nagios plugin
+#
+
+# check if this reflects actuall STOR2RRD working dir
+STOR2RRD_HOME=/home/stor2rrd/stor2rrd
+
+# do not change this
+STOR2RRD_NAGIOS_DIR="nagios"
+DEBUG=1
+DEBUG_OUT=/tmp/stor2rrd_alrt.log
+
+server=$1
+volume=$2
+item=$3
+
+if [ "$volume"x = "x" ]; then
+  echo "no parameters pased to nagios stor2rrd plug in"
+  exit 3
+fi
+if [ "$server"x = "x" ]; then
+  echo "Server name was not passed to the nagios stor2rrd plug in"
+  exit 3
+fi
+if [ "$item"x = "x" ]; then
+  echo "item : $server was not passed to the nagios stor2rrd plug in" 
+  exit 3
+fi
+
+file="$STOR2RRD_HOME/$STOR2RRD_NAGIOS_DIR/$server/$volume-$item"
+
+if [ ! -f "$file" ]; then
+  echo "OK"
+  exit 0
+else
+  if [ $DEBUG -eq 1 ]; then
+    echo "$1 $2" > $DEBUG_OUT
+    ls -l "$file" >>$DEBUG_OUT
+    cat "$file" >>  $DEBUG_OUT
+  fi
+  # critical/warning to do --PH
+  #egrep "CPU Critical alert" "$file" 2>/dev/null 1>&2
+  #if [ $? -eq 0 ]; then
+    # Critical alert
+    ret=2
+  #else
+  #  ret=1
+  #fi
+
+  cat "$file"
+  rm -f "$file"
+  if [ $DEBUG -eq 1 ]; then
+    ls -l "$file" >> $DEBUG_OUT 2>&1
+    echo "return: $ret" >> $DEBUG_OUT
+  fi
+  exit $ret
+fi
